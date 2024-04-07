@@ -1,0 +1,12 @@
+autoCorrect: false  # автоматическое исправление найденных проблем, если это возможно
+style:
+  maxLineLength: 120  # максимальная длина строки
+  wildcardImport: false  # запрет использования wildcard импортов
+  UnderscoresInNumericLiterals: false  # требование разделения чисел в соответствии с разрядами
+complexity:
+  LongParameterList: 7  # максимальное количество параметров в методе
+  LargeClass: 1000  # максимальный размер класса в строках
+comments:
+  NoTodo: WARN  # предупреждение при наличии комментариев TODO
+potentialBugs:
+  UnreachableCode: true  # обнаружение недостижимого кода
