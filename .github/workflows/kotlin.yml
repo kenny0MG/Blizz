@@ -21,4 +21,4 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
       - name: Run detekt
-        run: ./gradlew detektCheck
+        run: ./gradlew detekt
