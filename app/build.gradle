@@ -5,9 +5,7 @@ plugins {
     id("io.gitlab.arturbosch.detekt") version "1.18.1"
 
 }
- tasks.detekt {
-    configFile = files("detektCheck.yml")
-}
+
 android {
     compileSdk 34
 
