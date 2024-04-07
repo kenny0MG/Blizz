@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "519895398685",
+    "project_id": "blizz-31ead",
+    "storage_bucket": "blizz-31ead.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519895398685:android:534a5bf96cc9658a3149f4",
+        "android_client_info": {
+          "package_name": "org.blink.blizz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ3b_Ym-tY8ScfvO4CWCn7U--FQ41WmHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

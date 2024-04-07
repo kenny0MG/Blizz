@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:layout_marginLeft="4dp"
+    android:foreground="?android:selectableItemBackground"
+    app:cardCornerRadius="35dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_registr"
+            android:layout_width="350dp"
+            android:layout_height="570dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/delete_image"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/off_button"
+        android:padding="3dp"
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        android:text="delete"
+        app:layout_constraintEnd_toEndOf="@+id/image"
+
+        app:layout_constraintTop_toTopOf="@+id/image" />
+</androidx.cardview.widget.CardView>

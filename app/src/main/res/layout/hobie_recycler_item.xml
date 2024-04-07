@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/hobie_recycler"
+    android:id="@+id/layout_hobbie"
+    android:focusable="true"
+    android:clickable="true"
+
+    android:layout_marginTop="7dp"
+    android:layout_height="33dp">
+
+    <TextView
+        android:id="@+id/text_hobbie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:minWidth="90dp"
+        android:text="Mkjbkhkuhmh vjhusic"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:maxLines="1"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/white"
+        android:textSize="13.5sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.461" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

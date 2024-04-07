@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Blizz</string>
+
+    <string name="already_have_an_account">Try to upload high-quality images or videos that clearly show your face. Before downloading, we advise you to familiarize yourself with the <font color='#01C6DB'>rules</font></string>
+    <string name="registration" translatable="false" >Регистрация</string>
+    <string name="number_registration" translatable="false">Хорошо, а сейчас напиши свой номер</string>
+</resources>

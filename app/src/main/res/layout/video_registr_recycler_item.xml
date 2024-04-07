@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:selectableItemBackground"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="35dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="570dp">
+
+        <FrameLayout
+            android:id="@+id/video"
+            android:layout_width="350dp"
+            android:layout_height="570dp"
+            app:layout_constraintDimensionRatio="W,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkboxVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="8dp"
+                android:translationZ="3dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/timeLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_medium"
+                android:translationZ="3dp"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progress_circular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:translationZ="2dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/itemVideoPlayerThumbnail"
+                android:layout_width="350dp"
+                android:layout_height="570dp"
+                android:scaleType="centerCrop"
+                android:translationZ="1dp" />
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/itemVideoPlayer"
+                android:layout_width="350dp"
+                android:layout_height="570dp"
+                app:repeat_toggle_modes="all"
+                app:resize_mode="zoom"
+                app:surface_type="texture_view"
+                app:use_controller="false" />
+
+            <TextView
+                android:id="@+id/delete_video"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/off_button"
+                android:padding="3dp"
+                android:textSize="14dp"
+                android:textColor="@color/white"
+                android:text="delete"
+                app:layout_constraintEnd_toEndOf="@+id/image"
+
+                app:layout_constraintTop_toTopOf="@+id/image" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

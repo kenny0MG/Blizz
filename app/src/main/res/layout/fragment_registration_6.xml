@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageButton
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/bg_back"
+        app:layout_constraintBottom_toTopOf="@id/scrollable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toTopOf="@+id/materialButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_black"
+                android:includeFontPadding="false"
+                android:text="Registrasion"
+                android:textColor="@color/primary"
+                android:textSize="32sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="left"
+                android:includeFontPadding="false"
+                android:text="Hi Lets get started, Whats your number"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Theme.Blizz.LableBio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter the code" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/first_number_editText"
+                        style="@style/Theme.Blizz.Input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:inputType="phone"
+                        android:maxLength="1"
+                        android:hint="_" />
+
+                    <EditText
+                        android:id="@+id/second_number_editText"
+                        style="@style/Theme.Blizz.Input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center"
+                        android:inputType="phone"
+                        android:maxLength="1"
+                        android:hint="_" />
+
+                    <EditText
+                        android:id="@+id/third_number_editText"
+                        style="@style/Theme.Blizz.Input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center"
+                        android:inputType="phone"
+                        android:maxLength="1"
+                        android:hint="_" />
+
+                    <TextView
+                        style="@style/Theme.Blizz.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/poppins_black"
+                        android:gravity="center"
+                        android:text="–" />
+
+                    <EditText
+                        android:id="@+id/fourth_number_editText"
+                        style="@style/Theme.Blizz.Input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center"
+                        android:inputType="phone"
+                        android:maxLength="1"
+                        android:hint="_" />
+
+                    <EditText
+                        android:id="@+id/fifth_number_editText"
+
+                        style="@style/Theme.Blizz.Input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center"
+                        android:inputType="phone"
+                        android:maxLength="1"
+                        android:hint="_" />
+
+                    <EditText
+                        android:id="@+id/sixth_number_editText"
+                        style="@style/Theme.Blizz.Input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center"
+                        android:inputType="phone"
+                        android:maxLength="1"
+                        android:hint="_" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton"
+        style="@style/Theme.Blizz.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="52dp"
+        android:minWidth="250dp"
+        android:text="Continue"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--   Disable cтейт кнопки <com.google.android.material.button.MaterialButton
+           style="@style/Theme.SampleShips.Button"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+            android:translationZ="2dp"
+           android:layout_gravity="center_horizontal"
+           android:enabled="false"
+           android:minWidth="232dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:text="Continue (disabled)" /> -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

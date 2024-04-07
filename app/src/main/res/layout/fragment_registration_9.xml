@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageButton
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/bg_back"
+        app:layout_constraintBottom_toTopOf="@id/scrollable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_black"
+                android:includeFontPadding="false"
+                android:text="@string/registration"
+                android:textColor="@color/primary"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="left"
+                android:includeFontPadding="false"
+                android:text="@string/number_registration"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/Theme.Blizz.LableBio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Specify your real name" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    >
+
+
+                    <EditText
+                        android:id="@+id/phone_edit_text"
+                        style="@style/Theme.Blizz.Input"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+
+                        android:background="@drawable/bg_primary_input"
+                        android:hint="111 222 33 44" />
+
+                    <org.blink.blizz.countryCodePicker.ui.CountryCodePicker
+                        android:id="@+id/ccp_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/bg_edit_text_focus"
+                        android:gravity="center"
+                        android:padding="7dp"
+                        app:contentColor="@color/white"
+                        app:defaultNameCode="ru"
+                        app:excludedCountries="ad,ae"
+                        app:fontFamily="@font/poppins_medium"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:showArrowDown="true"
+                        app:showFlag="true"
+                        app:showNameCode="false"
+                        app:textSize="18sp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/linear_layout_gender"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:orientation="vertical">-->
+
+            <!--                <TextView-->
+            <!--                    style="@style/Theme.BlissMeet2.Label"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Your gender" />-->
+
+            <!--                <EditText-->
+            <!--                    style="@style/Theme.BlissMeet2.Input"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="8dp"-->
+            <!--                    android:hint="Send your gender...." />-->
+
+            <!--            </LinearLayout>-->
+
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/linear_layout_about"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:orientation="vertical">-->
+
+            <!--                <TextView-->
+            <!--                    style="@style/Theme.BlissMeet2.Label"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Tell about you" />-->
+
+            <!--                <EditText-->
+            <!--                    style="@style/Theme.BlissMeet2.Input"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="8dp"-->
+            <!--                    android:hint="What do you like the most..." />-->
+
+            <!--            </LinearLayout>-->
+
+
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/linear_layout_sex"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:orientation="vertical">-->
+
+            <!--                <TextView-->
+            <!--                    style="@style/Theme.BlissMeet2.Label"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Your sex" />-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="8dp"-->
+            <!--                    android:orientation="horizontal"-->
+            <!--                    android:weightSum="2">-->
+
+            <!--                    <com.google.android.material.card.MaterialCardView-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginEnd="4dp"-->
+            <!--                        android:layout_weight="1"-->
+            <!--                        android:checkable="true"-->
+            <!--                        app:cardBackgroundColor="#2A2A2A"-->
+            <!--                        app:cardCornerRadius="36dp">-->
+
+            <!--                        <LinearLayout-->
+            <!--                            android:layout_width="match_parent"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:gravity="center"-->
+            <!--                            android:orientation="vertical"-->
+            <!--                            android:padding="16dp">-->
+
+            <!--                            <ImageView-->
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:src="@drawable/ic_sex_man" />-->
+
+            <!--                            <TextView-->
+            <!--                                style="@style/Theme.BlissMeet2.Label"-->
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_marginTop="10dp"-->
+            <!--                                android:text="Man"-->
+            <!--                                android:textSize="20sp" />-->
+            <!--                        </LinearLayout>-->
+
+            <!--                    </com.google.android.material.card.MaterialCardView>-->
+
+            <!--                    &lt;!&ndash; Можно слушать / менять методом setOnCheckedChangeListener &ndash;&gt;-->
+            <!--                    <com.google.android.material.card.MaterialCardView-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginStart="4dp"-->
+            <!--                        android:layout_weight="1"-->
+            <!--                        android:checkable="true"-->
+            <!--                        app:cardBackgroundColor="#2A2A2A"-->
+            <!--                        app:cardCornerRadius="36dp"-->
+            <!--                        app:strokeColor="@color/primary"-->
+            <!--                        app:strokeWidth="2dp">-->
+
+
+            <!--                        <LinearLayout-->
+            <!--                            android:layout_width="match_parent"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:gravity="center"-->
+            <!--                            android:orientation="vertical"-->
+            <!--                            android:padding="16dp">-->
+
+            <!--                            <ImageView-->
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:src="@drawable/ic_sex_woman"-->
+            <!--                                android:tintMode="multiply"-->
+            <!--                                app:tint="@color/primary" />-->
+
+            <!--                            <TextView-->
+            <!--                                style="@style/Theme.BlissMeet2.Label"-->
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_marginTop="10dp"-->
+            <!--                                android:text="Man"-->
+            <!--                                android:textColor="@color/primary"-->
+            <!--                                android:textSize="20sp" />-->
+            <!--                        </LinearLayout>-->
+
+            <!--                    </com.google.android.material.card.MaterialCardView>-->
+            <!--                </LinearLayout>-->
+
+            <!--            </LinearLayout>-->
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_reg_phone"
+        style="@style/Theme.Blizz.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="52dp"
+        android:minWidth="250dp"
+        android:text="Continue"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--   Disable cтейт кнопки <com.google.android.material.button.MaterialButton
+           style="@style/Theme.SampleShips.Button"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+            android:translationZ="2dp"
+           android:layout_gravity="center_horizontal"
+           android:enabled="false"
+           android:minWidth="232dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:text="Continue (disabled)" /> -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

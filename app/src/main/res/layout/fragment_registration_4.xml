@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@color/black">
+
+    <ImageButton
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/bg_back"
+        app:layout_constraintBottom_toTopOf="@id/scrollable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toTopOf="@+id/materialButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_black"
+                android:includeFontPadding="false"
+                android:text="Registrasion"
+                android:textColor="@color/primary"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="left"
+                android:includeFontPadding="false"
+                android:text="Specify your gender"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+                        <LinearLayout
+                            android:id="@+id/linear_layout_sex"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Theme.Blizz.LableBio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Your gender" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/man_materialCard"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_weight="1"
+                                    android:checkable="true"
+                                    app:cardBackgroundColor="@color/gender"
+                                    app:cardCornerRadius="36dp"
+                                    app:strokeColor="@color/gender"
+                                    app:strokeWidth="2dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="16dp">
+
+                                        <ImageView
+                                            android:id="@+id/man_imageView"
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_sex_man"
+                                            android:tintMode="multiply"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/man_textView"
+
+                                            style="@style/Theme.Blizz.Label"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:text="Man"
+                                            android:textSize="20sp" />
+                                    </LinearLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <!-- Можно слушать / менять методом setOnCheckedChangeListener -->
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/woman_materialCard"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_weight="1"
+                                    android:checkable="true"
+                                    app:cardBackgroundColor="@color/gender"
+                                    app:cardCornerRadius="36dp"
+                                    app:strokeColor="@color/gender"
+                                    app:strokeWidth="2dp">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="16dp">
+
+                                        <ImageView
+                                            android:id="@+id/woman_imageView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_sex_woman"
+                                            android:tintMode="multiply"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/woman_textView"
+                                            style="@style/Theme.Blizz.Label"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:text="Woman"
+                                            android:textSize="20sp" />
+                                    </LinearLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton"
+        android:enabled="false"
+        style="@style/Theme.Blizz.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="52dp"
+        android:minWidth="250dp"
+        android:text="Continue"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--   Disable cтейт кнопки <com.google.android.material.button.MaterialButton
+           style="@style/Theme.SampleShips.Button"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+            android:translationZ="2dp"
+           android:layout_gravity="center_horizontal"
+           android:enabled="false"
+           android:minWidth="232dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:text="Continue (disabled)" /> -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
